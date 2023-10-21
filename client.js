@@ -21,9 +21,6 @@ const rl = createInterface({
 
 const client = new EventEmitter();
 const server = new TicketService(client)
-server.on('response',(response)=> {
-    console.log(`Response: ${response}`)
-})
 
 rl.on('line', (input)=> {
     switch (input) {
